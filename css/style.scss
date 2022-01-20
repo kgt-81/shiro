@@ -4,7 +4,7 @@
   font-family: 'Myriad Pro Regular';
   font-style: normal;
   font-weight: normal;
-  src: local('Myriad Pro Regular'), url('/font/MYRIADPRO-REGULAR.woff') format('woff');
+  src: local('Myriad Pro Regular'), url('font/MYRIADPRO-REGULAR.woff') format('woff');
   }
 
 *{
@@ -120,7 +120,7 @@ vertical-align: bottom;
 }
 
 .header-img {
-  background-image: url('/img/header.png');
+  background-image: url('../img/header.png');
   background-position: top center;
   background-size: cover;
   color: #fff;
@@ -311,7 +311,7 @@ section {
 
 // contact us
 .contact_us{
-  background-image: url('/img/contact_us.png');
+  background-image: url('../img/contact_us.png');
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 99px;
