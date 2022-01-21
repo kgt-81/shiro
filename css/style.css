@@ -2,7 +2,7 @@
   font-family: 'Myriad Pro Regular';
   font-style: normal;
   font-weight: normal;
-  src: local("Myriad Pro Regular"), url("font/MYRIADPRO-REGULAR.woff") format("woff");
+  src: local("Myriad Pro Regular"), url("../font/MYRIADPRO-REGULAR.woff") format("woff");
 }
 
 * {
@@ -240,7 +240,7 @@ section .heading-box {
   padding-top: 80px;
 }
 
-.concept {
+#concept {
   background: white;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, white), color-stop(70%, #ededed));
   background: linear-gradient(180deg, white 70%, #ededed 70%);
@@ -248,11 +248,11 @@ section .heading-box {
   padding-bottom: 102px;
 }
 
-.concept .wrapper {
+#concept .wrapper {
   padding-top: 0;
 }
 
-.work .wrapper {
+#work .wrapper {
   padding-top: 0;
 }
 
@@ -288,14 +288,14 @@ section .heading-box {
   line-height: 1.75;
 }
 
-.florist {
+#florist {
   background: #ededed;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(57%, #ededed), color-stop(57%, white));
   background: linear-gradient(180deg, #ededed 57%, white 57%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ededed",endColorstr="#ffffff",GradientType=1);
 }
 
-.florist .florist-box {
+#florist .florist-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,11 +305,11 @@ section .heading-box {
           justify-content: space-between;
 }
 
-.florist .florist-box .florist-item {
+#florist .florist-box .florist-item {
   width: 300px;
 }
 
-.florist .florist-box .florist-name {
+#florist .florist-box .florist-name {
   color: #333;
   font-family: Poppins;
   font-size: 24px;
@@ -317,15 +317,15 @@ section .heading-box {
   margin: 12px 0 16px;
 }
 
-.florist .florist-box .text {
+#florist .florist-box .text {
   line-height: 19px;
 }
 
-.shop_information .wrapper {
+#shop_information .wrapper {
   padding-bottom: 120px;
 }
 
-.shop_information .shop_information-box {
+#shop_information .shop_information-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -335,16 +335,16 @@ section .heading-box {
           justify-content: space-between;
 }
 
-.shop_information .shop_information-box img {
+#shop_information .shop_information-box img {
   width: 480px;
 }
 
-.shop_information .shop_information-box .shop_information-item {
+#shop_information .shop_information-box .shop_information-item {
   padding: 20px 40px 28px;
   width: 432px;
 }
 
-.shop_information .shop_information-box dl {
+#shop_information .shop_information-box dl {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,34 +352,34 @@ section .heading-box {
       flex-wrap: wrap;
 }
 
-.shop_information .shop_information-box dl dt, .shop_information .shop_information-box dl dd {
+#shop_information .shop_information-box dl dt, #shop_information .shop_information-box dl dd {
   height: 64px;
   margin-top: 12px;
 }
 
-.shop_information .shop_information-box dl dt:nth-of-type(2), .shop_information .shop_information-box dl dd:nth-of-type(2) {
+#shop_information .shop_information-box dl dt:nth-of-type(2), #shop_information .shop_information-box dl dd:nth-of-type(2) {
   height: 32px;
 }
 
-.shop_information .shop_information-box dl dt {
+#shop_information .shop_information-box dl dt {
   border-right: 1px solid #a0a0a0;
   font-weight: normal;
   width: 80px;
 }
 
-.shop_information .shop_information-box dl dd {
+#shop_information .shop_information-box dl dd {
   margin-left: 16px;
   width: 213px;
 }
 
-.contact_us {
+#contact_us {
   background-image: url("../img/contact_us.png");
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 99px;
 }
 
-.contact_us .contact_us-button {
+#contact_us .contact_us-button {
   background-color: #fff;
   border: 1px solid #a0a0a0;
   display: block;
@@ -392,7 +392,7 @@ section .heading-box {
   width: 360px;
 }
 
-.contact_us .contact_us-button .mail {
+#contact_us .contact_us-button .mail {
   border: 1px solid #a0a0a0;
   display: inline-block;
   height: 20px;
@@ -402,7 +402,7 @@ section .heading-box {
   width: 30px;
 }
 
-.contact_us .contact_us-button .mail::before {
+#contact_us .contact_us-button .mail::before {
   border-left: 1px solid #a0a0a0;
   border-bottom: 1px solid #a0a0a0;
   content: '';

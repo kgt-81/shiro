@@ -4,7 +4,7 @@
   font-family: 'Myriad Pro Regular';
   font-style: normal;
   font-weight: normal;
-  src: local('Myriad Pro Regular'), url('font/MYRIADPRO-REGULAR.woff') format('woff');
+  src: local('Myriad Pro Regular'), url('../font/MYRIADPRO-REGULAR.woff') format('woff');
   }
 
 *{
@@ -204,7 +204,7 @@ section {
 }
 
 // concept
-.concept{
+#concept{
   background: rgb(255,255,255);
   background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(237,237,237,1) 70%);
   background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(237,237,237,1) 70%);
@@ -217,7 +217,7 @@ section {
 }
 
 // work
-.work .wrapper {
+#work .wrapper {
   padding-top: 0;
 }
 .work-box{
@@ -242,7 +242,7 @@ section {
 }
 
 // florist
-.florist{
+#florist{
   background: rgb(237,237,237);
   background: -moz-linear-gradient(180deg, rgba(237,237,237,1) 57%, rgba(255,255,255,1) 57%);
   background: -webkit-linear-gradient(180deg, rgba(237,237,237,1) 57%, rgba(255,255,255,1) 57%);
@@ -269,7 +269,7 @@ section {
 }
 
 // shop information
-.shop_information{
+#shop_information{
   .wrapper{
     padding-bottom: 120px;
   }
@@ -310,7 +310,7 @@ section {
 }
 
 // contact us
-.contact_us{
+#contact_us{
   background-image: url('../img/contact_us.png');
   background-repeat: no-repeat;
   background-size: cover;

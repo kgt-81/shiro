@@ -31,3 +31,20 @@ hamburger_menu.addEventListener('click', function(e){
     header_menu.classList.add('open');
   }
 });
+
+const menu_link = document.querySelectorAll('a[href^="#"]');
+for (let i = 0; i < menu_link.length; i++) {
+  menu_link[i].addEventListener('click',function(e){
+    e.preventDefault();
+    let href = menu_link[i].getAttribute('href');
+    let target = document.getElementById(href.replace('#', ''));
+    const rect = target.getBoundingClientRect().top;
+    const offset = window.pageYOffset;
+    const position = rect + offset;
+    window.scrollTo({
+      top: position,
+      behavior: "smooth"
+    });
+  });
+
+}
