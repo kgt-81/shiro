@@ -230,7 +230,7 @@ section h2 {
 
 section h2::after {
   background-color: #333;
-  bottom: -20px;
+  bottom: -24px;
   content: '';
   height: 1px;
   left: 50%;
@@ -246,7 +246,8 @@ section h3 {
 }
 
 section .txt {
-  line-height: 19px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.8;
   padding-bottom: 40px;
   text-align: center;
 }
@@ -287,7 +288,8 @@ section .heading-box {
 }
 
 .work-box .work-item {
-  width: 420px;
+  max-width: 420px;
+  width: 50%;
 }
 
 .work-box .work-item:nth-of-type(even) {
@@ -326,7 +328,7 @@ section .heading-box {
 
 #florist .florist-box .florist-name {
   color: #333;
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: bold;
   margin: 12px 0 16px;
@@ -341,22 +343,24 @@ section .heading-box {
 }
 
 #shop_information .shop_information-box {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 320px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 #shop_information .shop_information-box img {
-  width: 480px;
+  width: 45%;
 }
 
 #shop_information .shop_information-box .shop_information-item {
   padding: 20px 40px 28px;
-  width: 432px;
+  width: 45%;
 }
 
 #shop_information .shop_information-box dl {
@@ -365,33 +369,38 @@ section .heading-box {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #shop_information .shop_information-box dl dt, #shop_information .shop_information-box dl dd {
-  height: 64px;
+  line-height: 32px;
   margin-top: 12px;
-}
-
-#shop_information .shop_information-box dl dt:nth-of-type(2), #shop_information .shop_information-box dl dd:nth-of-type(2) {
-  height: 32px;
 }
 
 #shop_information .shop_information-box dl dt {
   border-right: 1px solid #a0a0a0;
   font-weight: normal;
-  width: 80px;
+  width: 24%;
 }
 
 #shop_information .shop_information-box dl dd {
-  margin-left: 16px;
-  width: 213px;
+  width: 72%;
 }
 
 #contact_us {
   background-image: url("../img/contact_us.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#contact_us .wrapper {
   padding-bottom: 99px;
+}
+
+#contact_us .contact_us-bg {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 #contact_us .contact_us-button {
@@ -441,5 +450,82 @@ section .heading-box {
 .copyright .wrapper small {
   font-size: 16px;
   line-height: 40px;
+}
+
+@media screen and (max-width: 653px) {
+  .wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  section h2 {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+  section .txt {
+    font-size: 14px;
+  }
+  #header {
+    top: 0;
+  }
+  #header h1 {
+    font-size: 24px;
+  }
+  #header .wrapper {
+    padding: 0 16px;
+  }
+  .header-img {
+    height: 355px;
+  }
+  .header-img .title {
+    padding-top: 120px;
+  }
+  .header-img .title .large {
+    font-size: 64px;
+    height: auto;
+  }
+  .header-img .title .small {
+    font-size: 14px;
+  }
+  .work-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .work-wrapper .work-box {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    height: auto;
+    width: auto;
+  }
+  .work-wrapper .work-box .work-item {
+    width: 84vw;
+  }
+  .work-wrapper .work-box .work-item:nth-of-type(n) {
+    margin-top: 0;
+  }
+  #shop_information .shop_information-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #shop_information .shop_information-box img {
+    width: 100%;
+  }
+  #shop_information .shop_information-box .shop_information-item {
+    width: 100%;
+  }
+  #contact_us .wrapper {
+    width: auto;
+  }
+  #contact_us .contact_us-button {
+    width: 240px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
