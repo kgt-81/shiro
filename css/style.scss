@@ -36,6 +36,11 @@ vertical-align: bottom;
     }
     #hamburger-menu .line{
       background-color: #2b2b2b;
+      &:first-of-type{
+        &::before,&::after{
+          background-color: #2b2b2b;
+        }  
+      }
     }
   }
   &.fixed{
@@ -62,14 +67,13 @@ vertical-align: bottom;
     &.open {
       .line{
         &:first-of-type{
-          top: 32px;
           transform: rotate(45deg);
-        }
-        &:nth-of-type(2){
-          opacity: 0;
+          &::before,&::after{
+            opacity: 0;
+            top: 50%;
+          }
         }
         &:last-of-type{
-          top: 32px;
           transform: rotate(-45deg);
         }
       }
@@ -79,15 +83,25 @@ vertical-align: bottom;
       display: block;
       height: 1px;
       position: absolute;
+      top: 50%;
       width: 32px;
       &:first-of-type{
-        top: 26px;
-      }
-      &:nth-of-type(2){
-        top: 32px;
-      }
-      &:last-of-type{
-        top: 38px;
+        position: relative;
+        &::before,&::after{
+          background-color: #fff;
+          content: '';
+          display: block;
+          height: 1px;
+          position: absolute;
+          transition-duration: 0.5s;
+          width: 32px;
+        }
+        &::before{
+          top: calc(50% - 8px);
+        }
+        &::after{
+          top: calc(50% + 8px);
+        }
       }
     }
   }
@@ -99,7 +113,7 @@ vertical-align: bottom;
     top: calc(100% + 1px);
     width: 100%;
     &.open{
-      height: 607px;
+      height: 90vh;
     }
     ul {
       border-bottom: 1px solid #ccc;
@@ -112,8 +126,8 @@ vertical-align: bottom;
       a{
         display: block;
         font-size: 18px;
-        height: 75px;
-        line-height: 75px;
+        height: 11.24vh;
+        line-height: 11.24vh;
       }
     }
   }

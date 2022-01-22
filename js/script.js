@@ -1,3 +1,4 @@
+'use strict';
 window.addEventListener('scroll', header);
 window.addEventListener('load', header);
 function header(){
@@ -41,6 +42,8 @@ for (let i = 0; i < menu_link.length; i++) {
     const rect = target.getBoundingClientRect().top;
     const offset = window.pageYOffset;
     const position = rect + offset;
+    hamburger_menu.classList.remove('open');
+    header_menu.classList.remove('open');
     window.scrollTo({
       top: position,
       behavior: "smooth"
