@@ -12,10 +12,9 @@
 }
 
 img {
-width: 100%;
-max-width: 100%;
-height: auto;
-vertical-align: bottom;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 #header {
@@ -177,7 +176,6 @@ vertical-align: bottom;
   margin: 0 auto;
   padding-top: 80px;
   max-width: 960px;
-  width: 100%;
 }
 
 section {
@@ -213,9 +211,6 @@ section {
     padding-bottom: 40px;
     text-align: center;
   }
-  .heading-box{
-    padding-top: 80px;
-  }
 }
 
 // concept
@@ -225,16 +220,18 @@ section {
   background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(237,237,237,1) 70%);
   background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(237,237,237,1) 70%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ededed",GradientType=1);
-  padding-bottom: 102px;
-  .wrapper {
-    padding-top: 0;
+  img{
+    height: 400px;
+    object-fit: cover;
+    object-position: 50% 0;
+    width: auto;
+  }
+  .wrapper{
+    padding-bottom: 87px;
   }
 }
 
 // work
-#work .wrapper {
-  padding-top: 0;
-}
 .work-box{
   align-content: space-between;
   display: flex;
@@ -243,12 +240,11 @@ section {
   height: 1609px;
   .work-item{
     max-width: 420px;
+    padding-bottom: 80px;
     width: 50%;
-    &:nth-of-type(even){
-      margin-top: 80px;
-    }
     &:nth-of-type(3){
       margin-top: 120px;
+      padding-top: 0;
     }
     p{
       height: 84px;
@@ -264,6 +260,9 @@ section {
   background: -webkit-linear-gradient(180deg, rgba(237,237,237,1) 57%, rgba(255,255,255,1) 57%);
   background: linear-gradient(180deg, rgba(237,237,237,1) 57%, rgba(255,255,255,1) 57%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ededed",endColorstr="#ffffff",GradientType=1);
+  .wrapper{
+    padding-bottom: 40px;
+  }
   .florist-box{
     display: flex;
     height: 340px;
@@ -278,8 +277,8 @@ section {
       font-weight: bold;
       margin: 12px 0 16px;
     }
-    .text{
-      line-height: 19px;
+    .florist-text{
+      line-height: 1.8;
     }
   }
 }
@@ -292,12 +291,14 @@ section {
   .shop_information-box{
     align-items: center;
     display: flex;
+    height: 316px;
     justify-content: space-between;
     img{
-      width: 45%;
+      width: 50%;
     }
     .shop_information-item{
-      padding: 20px 40px 28px;
+      margin-top: 6px;
+      padding: 16px;
       width: 45%;
     }
     dl{
@@ -305,8 +306,10 @@ section {
       flex-wrap: wrap;
       justify-content: space-between;
       dt,dd{
-        line-height: 32px;
-        margin-top: 12px;
+        line-height: 2;
+        &:nth-of-type(n+2){
+          margin-top: 12px;
+        }
       }
       dt{
         border-right: 1px solid #a0a0a0;
@@ -379,8 +382,8 @@ section {
 
 @media screen and (max-width: 653px) {
   .wrapper{
-    padding-left: 16px;
-    padding-right: 16px;
+    margin: 0 16px;
+    padding-top: 40px;
   }
   section {
     h2{
@@ -389,6 +392,7 @@ section {
     }
     .txt{
       font-size: 14px;
+      text-align: left;
     }
   }
   // header
@@ -408,13 +412,21 @@ section {
      .large{
        font-size: 64px;
        height: auto;
+       line-height: normal;
      }
      .small{
        font-size: 14px;
      }
    }
   }
+  // concept
+  #concept .wrapper{
+    padding-bottom: 46px;
+  }
   // work
+  #work .wrapper{
+    padding-bottom: 24px;
+  }
   .work-wrapper{
     overflow-x: scroll;
     overflow-y: hidden;
@@ -425,27 +437,70 @@ section {
       height: auto;
       width: auto;
       .work-item{
-        width: 84vw;
+        padding-bottom: 24px;
+        width: 82.6vw;
         &:nth-of-type(n){
           margin-top: 0;
+        }
+        &:nth-last-of-type(n+2){
+          margin-right: 24px;
+        }
+        img{
+          height: 200px;
+          object-fit: cover;
+          object-position: 0 75%;
+        }
+        p{
+          font-size: 14px;
         }
       }
     }
   
   }
-  // shop information
-  #shop_information .shop_information-box{
-    flex-direction: column;
-    img{
-      width: 100%;
+  // florist
+  #florist{
+    background: rgb(237,237,237);
+    .florist-wrapper{
+      overflow-x: scroll;
+      overflow-y: hidden;
     }
-    .shop_information-item{
-      width: 100%;
+    .florist-box{
+      display: inline-flex;
+      height: auto;
+      width: auto;
+      .florist-item{
+        width: 82.6vw;
+        &:nth-last-of-type(n+2){
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+
+  // shop information
+  #shop_information {
+    .wrapper{
+      padding-bottom: 40px;
+    }
+    .shop_information-box{
+      flex-direction: column;
+      height: auto;
+      img{
+        width: 100%;
+      }
+      dt,dd{
+        font-size: 14px;
+      }
+      
+      .shop_information-item{
+        width: 100%;
+      }
     }
   }
   // contact_us
   #contact_us {
     .wrapper{
+      padding-bottom: 64px;
       width: auto;
     }
     .contact_us-button{

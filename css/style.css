@@ -13,7 +13,6 @@ img {
   width: 100%;
   max-width: 100%;
   height: auto;
-  vertical-align: bottom;
 }
 
 #header {
@@ -208,7 +207,6 @@ img {
   margin: 0 auto;
   padding-top: 80px;
   max-width: 960px;
-  width: 100%;
 }
 
 section {
@@ -252,24 +250,24 @@ section .txt {
   text-align: center;
 }
 
-section .heading-box {
-  padding-top: 80px;
-}
-
 #concept {
   background: white;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, white), color-stop(70%, #ededed));
   background: linear-gradient(180deg, white 70%, #ededed 70%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ededed",GradientType=1);
-  padding-bottom: 102px;
+}
+
+#concept img {
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0;
+     object-position: 50% 0;
+  width: auto;
 }
 
 #concept .wrapper {
-  padding-top: 0;
-}
-
-#work .wrapper {
-  padding-top: 0;
+  padding-bottom: 87px;
 }
 
 .work-box {
@@ -289,15 +287,13 @@ section .heading-box {
 
 .work-box .work-item {
   max-width: 420px;
+  padding-bottom: 80px;
   width: 50%;
-}
-
-.work-box .work-item:nth-of-type(even) {
-  margin-top: 80px;
 }
 
 .work-box .work-item:nth-of-type(3) {
   margin-top: 120px;
+  padding-top: 0;
 }
 
 .work-box .work-item p {
@@ -310,6 +306,10 @@ section .heading-box {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(57%, #ededed), color-stop(57%, white));
   background: linear-gradient(180deg, #ededed 57%, white 57%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ededed",endColorstr="#ffffff",GradientType=1);
+}
+
+#florist .wrapper {
+  padding-bottom: 40px;
 }
 
 #florist .florist-box {
@@ -334,8 +334,8 @@ section .heading-box {
   margin: 12px 0 16px;
 }
 
-#florist .florist-box .text {
-  line-height: 19px;
+#florist .florist-box .florist-text {
+  line-height: 1.8;
 }
 
 #shop_information .wrapper {
@@ -349,17 +349,19 @@ section .heading-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 316px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 #shop_information .shop_information-box img {
-  width: 45%;
+  width: 50%;
 }
 
 #shop_information .shop_information-box .shop_information-item {
-  padding: 20px 40px 28px;
+  margin-top: 6px;
+  padding: 16px;
   width: 45%;
 }
 
@@ -375,7 +377,10 @@ section .heading-box {
 }
 
 #shop_information .shop_information-box dl dt, #shop_information .shop_information-box dl dd {
-  line-height: 32px;
+  line-height: 2;
+}
+
+#shop_information .shop_information-box dl dt:nth-of-type(n+2), #shop_information .shop_information-box dl dd:nth-of-type(n+2) {
   margin-top: 12px;
 }
 
@@ -454,8 +459,8 @@ section .heading-box {
 
 @media screen and (max-width: 653px) {
   .wrapper {
-    padding-left: 16px;
-    padding-right: 16px;
+    margin: 0 16px;
+    padding-top: 40px;
   }
   section h2 {
     font-size: 28px;
@@ -463,6 +468,7 @@ section .heading-box {
   }
   section .txt {
     font-size: 14px;
+    text-align: left;
   }
   #header {
     top: 0;
@@ -482,9 +488,16 @@ section .heading-box {
   .header-img .title .large {
     font-size: 64px;
     height: auto;
+    line-height: normal;
   }
   .header-img .title .small {
     font-size: 14px;
+  }
+  #concept .wrapper {
+    padding-bottom: 46px;
+  }
+  #work .wrapper {
+    padding-bottom: 24px;
   }
   .work-wrapper {
     overflow-x: scroll;
@@ -504,24 +517,66 @@ section .heading-box {
     width: auto;
   }
   .work-wrapper .work-box .work-item {
-    width: 84vw;
+    padding-bottom: 24px;
+    width: 82.6vw;
   }
   .work-wrapper .work-box .work-item:nth-of-type(n) {
     margin-top: 0;
+  }
+  .work-wrapper .work-box .work-item:nth-last-of-type(n+2) {
+    margin-right: 24px;
+  }
+  .work-wrapper .work-box .work-item img {
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0 75%;
+       object-position: 0 75%;
+  }
+  .work-wrapper .work-box .work-item p {
+    font-size: 14px;
+  }
+  #florist {
+    background: #ededed;
+  }
+  #florist .florist-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  #florist .florist-box {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    height: auto;
+    width: auto;
+  }
+  #florist .florist-box .florist-item {
+    width: 82.6vw;
+  }
+  #florist .florist-box .florist-item:nth-last-of-type(n+2) {
+    margin-right: 24px;
+  }
+  #shop_information .wrapper {
+    padding-bottom: 40px;
   }
   #shop_information .shop_information-box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: auto;
   }
   #shop_information .shop_information-box img {
     width: 100%;
+  }
+  #shop_information .shop_information-box dt, #shop_information .shop_information-box dd {
+    font-size: 14px;
   }
   #shop_information .shop_information-box .shop_information-item {
     width: 100%;
   }
   #contact_us .wrapper {
+    padding-bottom: 64px;
     width: auto;
   }
   #contact_us .contact_us-button {
