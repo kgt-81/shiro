@@ -20,15 +20,15 @@ function header(){
     // もう一度ウィンドウが要素の上に来た時
   };
 };
-let humburger_menu = document.getElementById('humburger-menu');
+let hamburger_menu = document.getElementById('hamburger-menu');
 let header_menu = document.getElementById('header-menu');
-humburger_menu.addEventListener('click', function(e){
+hamburger_menu.addEventListener('click', function(e){
   e.preventDefault();
-  if (humburger_menu.classList.contains('open')) {
-    humburger_menu.classList.remove('open');
+  if (hamburger_menu.classList.contains('open')) {
+    hamburger_menu.classList.remove('open');
     header_menu.classList.remove('open');
   } else {
-    humburger_menu.classList.add('open');
+    hamburger_menu.classList.add('open');
     header_menu.classList.add('open');
   }
 });
@@ -42,7 +42,7 @@ for (let i = 0; i < menu_link.length; i++) {
     const rect = target.getBoundingClientRect().top;
     const offset = window.pageYOffset;
     const position = rect + offset;
-    humburger_menu.classList.remove('open');
+    hamburger_menu.classList.remove('open');
     header_menu.classList.remove('open');
     window.scrollTo({
       top: position,
