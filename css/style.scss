@@ -33,7 +33,7 @@ img {
     h1{
       color: #2b2b2b;
     }
-    #hamburger-menu .line{
+    #humburger-menu .line{
       background-color: #2b2b2b;
       &:first-of-type{
         &::before,&::after{
@@ -58,7 +58,7 @@ img {
     justify-content: space-between;
     padding: 0;
   }
-  #hamburger-menu{
+  #humburger-menu{
     display: block;
     height: 100%;
     position: relative;

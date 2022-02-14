@@ -23,26 +23,24 @@ img {
 }
 
 #header * {
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 #header.black {
   background-color: #fff;
   border-bottom: 1px solid #a0a0a0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
-          box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
 }
 
 #header.black h1 {
   color: #2b2b2b;
 }
 
-#header.black #hamburger-menu .line {
+#header.black #humburger-menu .line {
   background-color: #2b2b2b;
 }
 
-#header.black #hamburger-menu .line:first-of-type::before, #header.black #hamburger-menu .line:first-of-type::after {
+#header.black #humburger-menu .line:first-of-type::before, #header.black #humburger-menu .line:first-of-type::after {
   background-color: #2b2b2b;
 }
 
@@ -58,42 +56,34 @@ img {
 }
 
 #header .wrapper {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
   height: 64px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 0;
 }
 
-#header #hamburger-menu {
+#header #humburger-menu {
   display: block;
   height: 100%;
   position: relative;
   width: 32px;
 }
 
-#header #hamburger-menu.open .line:first-of-type {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+#header #humburger-menu.open .line:first-of-type {
+  transform: rotate(45deg);
 }
 
-#header #hamburger-menu.open .line:first-of-type::before, #header #hamburger-menu.open .line:first-of-type::after {
+#header #humburger-menu.open .line:first-of-type::before, #header #humburger-menu.open .line:first-of-type::after {
   opacity: 0;
   top: 50%;
 }
 
-#header #hamburger-menu.open .line:last-of-type {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+#header #humburger-menu.open .line:last-of-type {
+  transform: rotate(-45deg);
 }
 
-#header #hamburger-menu .line {
+#header #humburger-menu .line {
   background-color: #fff;
   display: block;
   height: 1px;
@@ -102,26 +92,25 @@ img {
   width: 32px;
 }
 
-#header #hamburger-menu .line:first-of-type {
+#header #humburger-menu .line:first-of-type {
   position: relative;
 }
 
-#header #hamburger-menu .line:first-of-type::before, #header #hamburger-menu .line:first-of-type::after {
+#header #humburger-menu .line:first-of-type::before, #header #humburger-menu .line:first-of-type::after {
   background-color: #fff;
   content: '';
   display: block;
   height: 1px;
   position: absolute;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
   width: 32px;
 }
 
-#header #hamburger-menu .line:first-of-type::before {
+#header #humburger-menu .line:first-of-type::before {
   top: calc(50% - 8px);
 }
 
-#header #hamburger-menu .line:first-of-type::after {
+#header #humburger-menu .line:first-of-type::after {
   top: calc(50% + 8px);
 }
 
@@ -188,8 +177,7 @@ img {
   height: 2px;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 12px;
 }
 
@@ -233,8 +221,7 @@ section h2::after {
   height: 1px;
   left: 50%;
   position: absolute;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   width: 40px;
 }
 
@@ -252,17 +239,16 @@ section .txt {
 
 #concept {
   background: white;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, white), color-stop(70%, #ededed));
+  background: -moz-linear-gradient(180deg, white 70%, #ededed 70%);
+  background: -webkit-linear-gradient(180deg, white 70%, #ededed 70%);
   background: linear-gradient(180deg, white 70%, #ededed 70%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ededed",GradientType=1);
 }
 
 #concept img {
   height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 0;
-     object-position: 50% 0;
+  object-fit: cover;
+  object-position: 50% 0;
   width: auto;
 }
 
@@ -271,17 +257,10 @@ section .txt {
 }
 
 .work-box {
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-content: space-between;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
   height: 1609px;
 }
 
@@ -303,7 +282,8 @@ section .txt {
 
 #florist {
   background: #ededed;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(57%, #ededed), color-stop(57%, white));
+  background: -moz-linear-gradient(180deg, #ededed 57%, white 57%);
+  background: -webkit-linear-gradient(180deg, #ededed 57%, white 57%);
   background: linear-gradient(180deg, #ededed 57%, white 57%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ededed",endColorstr="#ffffff",GradientType=1);
 }
@@ -313,13 +293,9 @@ section .txt {
 }
 
 #florist .florist-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 340px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 #florist .florist-box .florist-item {
@@ -343,16 +319,10 @@ section .txt {
 }
 
 #shop_information .shop_information-box {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
   height: 316px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 #shop_information .shop_information-box img {
@@ -366,14 +336,9 @@ section .txt {
 }
 
 #shop_information .shop_information-box dl {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #shop_information .shop_information-box dl dt, #shop_information .shop_information-box dl dd {
@@ -439,10 +404,8 @@ section .txt {
   left: 0;
   position: absolute;
   top: 0;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
+  transform: rotate(-45deg);
+  transform-origin: left top;
   width: 20px;
 }
 
@@ -504,15 +467,9 @@ section .txt {
     overflow-y: hidden;
   }
   .work-wrapper .work-box {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     height: auto;
     width: auto;
   }
@@ -528,10 +485,8 @@ section .txt {
   }
   .work-wrapper .work-box .work-item img {
     height: 200px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 0 75%;
-       object-position: 0 75%;
+    object-fit: cover;
+    object-position: 0 75%;
   }
   .work-wrapper .work-box .work-item p {
     font-size: 14px;
@@ -544,8 +499,6 @@ section .txt {
     overflow-y: hidden;
   }
   #florist .florist-box {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
     height: auto;
     width: auto;
@@ -560,10 +513,7 @@ section .txt {
     padding-bottom: 40px;
   }
   #shop_information .shop_information-box {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     height: auto;
   }
   #shop_information .shop_information-box img {
@@ -583,4 +533,3 @@ section .txt {
     width: 240px;
   }
 }
-/*# sourceMappingURL=style.css.map */
